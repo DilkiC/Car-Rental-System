@@ -1,0 +1,7 @@
+insert into customer values(
+'C001','Panadura','077125456984','nimal@gamil.com','145622658V','Nimal','2021/01/02'
+);
+
+insert into customerlogin values(
+'nimal1997','nimii','C001'
+);

@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy_Car_Rental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="Style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!--nav bar-----header...............................................................................................-->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#homePge" id="easyCarLink">Easy Car Rental</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#homePge">
+                        <div id="homeLink">Home</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#carItemPge">
+                        <div id="carItemLink">Car Items</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#custRegisterPge">
+                        <div id="custRegisterLink">Customer Register</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">
+                        <div id="bookingLink">Bookings</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#adminPage">
+                        <div id="adminLink">Admin</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#driverPage">
+                        <div id="driverLink">Drivers</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<hr size="5" >
+
+
+
+<!--home page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<div id="homePge" style="background-color: #e7dede">
+    <div class="jumbotron text-center">
+        <h1 class="display-3"><img src="assets/img/download%20(1).jpg"><img src="assets/img/download%20(3).jpg"><img src="assets/img/download%20(4).jpg"></h1>
+        <p class="lead"><strong><b>Make your trip enjoyable</b></strong> <a href="#custRegisterPge">for further instructions setup your account .</a> </p>
+        
+        <hr>
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-4 col-md-12 ">
+                    <div class="card box-shadow mx-auto my-5" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Registered users.</h5>
+                            <p class="card-text"><h1 id="cardRegUsers">10</h1></p>
+                            <a href="#" class="btn btn-dark">Go</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 ">
+                    <div class="card box-shadow my-5 mx-auto" style="width: 18rem;">
+<!--
+                        <img src="https://nsa40.casimages.com/img/2021/06/15/210615072120170366.jpg" class="card-img-top" alt="...">
+-->
+                        <div class="card-body">
+                            <h5 class="card-title">Total bookings for the day.</h5>
+                            <p class="card-text"><h1 id="cardTotBooking">10</h1></p>
+                            <a href="#" class="btn btn-dark">Go</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 ">
+                    <div class="card box-shadow my-5 mx-auto" style="width: 18rem;">
+                        <!--
+                                                <img src="https://nsa40.casimages.com/img/2021/06/15/210615072120170366.jpg" class="card-img-top" alt="...">
+                        -->
+                        <div class="card-body">
+                            <h5 class="card-title">No of Cars.</h5>
+                            <p class="card-text"> <h1 id="cardNoCars">10</h1></p>
+                            <a href="#" class="btn btn-dark">Go</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 ">
+                    <div class="card box-shadow mx-auto my-5" style="width: 18rem;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">No of Drivers. </h5>
+                            <p class="card-text"><h1 id="cardNoDriver">10</h1></p>
+                            <a href="#" class="btn btn-dark">Go</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+<!--Car item page//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="carItemPge" style="background-color: #c1ccdb">
+    <div class="p-10 bg-surface-secondary">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h6>Car Items</h6>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-nowrap" id="displayCarsTbl">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col"><a href="assets/img/download.jpg">Car Id</a></th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Car Type</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Transmission Type</th>
+                            <th scope="col">Fuel Type</th>
+                            <th scope="col">No of Passengers</th>
+                            <th scope="col">Daily Rate(Rs.)</th>
+                            <th scope="col">Free Km for a day</th>
+                            <th scope="col">Monthly Rate</th>
+                            <th scope="col">Free Km for a month</th>
+                            <th scope="col">Price per extra Km(Rs.)</th>
+                            <!--<th></th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+<!--<h1> about Loss damage Payemnts</h1>-->
+    <div class="p-10 bg-surface-secondary">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h6>Loss Damage Waiver Payment</h6>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-nowrap" id="tblloss">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Car Type</th>
+                            <th scope="col">Loss Damage Waiver Payment(Rs.) </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>General</td>
+                            <td>10000</td>
+                        </tr>
+                        <tr>
+                            <td>Premium</td>
+                            <td>15000</td>
+                        </tr>
+                        <tr>
+                            <td>Luxury</td>
+                            <td>20000</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--<h1> car iamges chart</h1>
+<h1> car count</h1>-->
+    <br><br>
+</div>
+
+
+
+<!--Booking page///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="bookingPge" class="bg-img">
+    <div class="content" >
+        <header>Login Form</header>
+        <form >
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input id="loginUserName" type="text" required placeholder="User Name">
+            </div>
+            <div class="field space">
+                <span class="fa fa-lock"></span>
+                <input id="loginPassword" type="password" class="pass-key" required placeholder="Password">
+                <span class="show">SHOW</span>
+            </div>
+            <div class="pass">
+                <abbr title="Update your password"><a id="forgotPassCust">Forgot Password?</a></abbr>
+            </div>
+            <div class="field">
+                 <input id="custLogin" type="submit" value="LOGIN">
+
+            </div>
+        </form>
+        <br><br>
+        <div class="signup">Don't have account?
+            <a href="#" ><div id="signUpLink">Register Now</div></a>
+        </div>
+    </div>
+</div>
+
+<!--Booking car with order page///////////////////////////////////////////////////////////////////////////////////////////////////////////////.-->
+<div id="bookingOrderPage" style="background-color: #c1ccdb">
+    <div data-role="header" class="center">
+        <strong>Booking Your Time</strong>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="col">
+            <!--//////////////////////////////////////////////////////////////////////////////////////////-->
+            <div class="row">
+                <form >
+                    <div class="form-floating mb-3" >
+                        <input class="form-control" id="bId" placeholder="bId" type="text" style="background-color: #97bcf1">
+                        <label for="bId" class="form-label">Booking Id</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="cId" placeholder="cId" type="text" style="background-color: #97bcf1">
+                        <label for="cId" class="form-label">Enter Your Customer Id(C0)</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="bDate" placeholder="bDate" type="text" style="background-color: #97bcf1">
+                        <label  for="bDate" class="form-label">Booking Date</label>
+                    </div>
+                </form>
+            </div>
+
+            <hr>
+            <!--//////////////////////////////////////////////////////////////////////////////////////////-->
+
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <!--<div class="form-floating mb-3"> &lt;!&ndash;drop down&ndash;&gt;
+                            <input class="form-control" id="brand" placeholder="brand" type="text" >
+                            <label  for="brand" class="form-label">Brand</label>
+                        </div>-->
+                        <div>
+                            <label for="cmbcarBrand">Select Car Brand</label>
+                            <select id="cmbcarBrand" class="form-select">
+                                <option>SuzukiAltoPremium</option>
+                                <option>SuzukiAltoK10</option>
+                                <option>ToyotaCorollaAxio</option>
+                                <option>PeroduaBezzaPrime</option>
+                                <option>ToyotaPremio</option>
+                                <option>MercedesBMW</option>
+                            </select>
+
+                        </div>
+                        <br><br>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="carIdCarItem" placeholder="carIdCarItem" type="text" >
+                            <label  for="carIdCarItem" class="form-label">Enter Car ID(V0)</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="pickDate" placeholder="pickDate" type="date" >
+                            <label  for="pickDate" class="form-label">Pick up Date</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="pickTime" placeholder="pickTime" type="time" >
+                            <label  for="pickTime" class="form-label">Pick up Time</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="returnDate" placeholder="returnDate" type="date" >
+                            <label  for="returnDate" class="form-label">Return Date</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="returnTime" placeholder="returnTime" type="time" >
+                            <label  for="returnTime" class="form-label">Return Time</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="venue" placeholder="venue" type="text" >
+                            <label  for="venue" class="form-label">Venue</label>
+                        </div>
+                        <hr>
+                        <strong>Do you want a driver?</strong>
+                        <div class="form-check d-inline-flex mx-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioYES" value="1">
+                            <label class="form-check-label" for="radioYES">Yes</label>
+                        </div>
+                        <div class="form-check d-inline-flex mx-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioNo" value="2">
+                            <label class="form-check-label" for="radioNo">No</label>
+                        </div>
+                        <!--<div class="form-floating mb-3">&lt;!&ndash;drop down&ndash;&gt;
+                            <input class="form-control" id="dId" placeholder="dId" type="text" >
+                            <label  for="dId" class="form-label">Driver Id</label>
+                        </div>-->
+
+                    </form>
+                </div>
+
+                <div class="col">
+                    <form>
+                        <strong>Loss Damage Waiver</strong>
+                        <hr>
+                        <!--<div class="form-floating mb-3">&lt;!&ndash;drop down&ndash;&gt;
+                            <input class="form-control" id="carTypeCarItem" placeholder="carTypeCarItem" type="text" >
+                            <label  for="carTypeCarItem" class="form-label">Car Type</label>
+                        </div>-->
+                        <!--<br><br>-->
+
+                        <div>
+                            <label for="cmbcartype">Select Car Type</label>
+                            <select id="cmbcartype" class="form-select">
+                                <option>General</option>
+                                <option>Premium</option>
+                                <option>Luxury</option>
+                            </select>
+
+                        </div>
+
+                        <br><br>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="lossPrice" placeholder="lossPrice" type="text" >
+                            <label class="form-label" for="lossPrice">Loss Price</label>
+                        </div>
+                        <hr>
+                        <div class="form-floating mb-3">
+                            <strong>Details :</strong>
+                            <h5>Loss Damage Waiver payment to the BOC bank and account No is 12545684.You should upload your bank slip.</h5>
+                        </div>
+                        <hr>
+                        <div class="file-upload">
+                            <br><br>
+                            <strong>Upload your Bank slip</strong>
+                            <br><br>
+                            <form>
+                                <label class="form-label" for="bankSlipFile">Select a file</label>
+                                <input type="file" class="form-control" id="bankSlipFile" name="file">
+                            </form>
+                        </div>
+
+                        <br>
+<!--
+                        <button id="uploadSlipBtn" type="button" class="btn btn-dark btn-rounded">Upload</button>
+-->
+                    </form>
+                </div>
+            </div>
+
+            <hr>
+
+            <!--//////////////////////////////////////////////////////////////////////////////////////////-->
+
+            <div class="row">
+                <!--add to cart table..................-->
+            </div>
+            <button id="bookBtn" type="button" class="btn btn-success btn-rounded" style="width: 100%">Book Your Rent Car</button>
+            <br><br>
+
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!--Customer register page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="custRegisterPge" style="background-color: #c1ccdb">
+    <div data-role="header" class="center">
+        <strong>Customer Registration</strong>
+        <br><br>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                
+                <form>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="custId" placeholder="CustomerID" type="text" name="id">
+                        <label id="lblCustId" for="custId">Customer ID</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="custName" placeholder="CustomerName" type="text" name="name">
+                        <label id="lblCustName" for="custName">Customer Name(User Name)</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="custAddress" placeholder="CustomerAddress" type="text" name="address">
+                        <label id="lblCustAddress" for="custAddress">Customer Address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="custContact" placeholder="CustomerContact" type="text" name="contact">
+                        <label id="lblCustContact" for="custContact">Customer Contact</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="custNIC" placeholder="CustomerNIC/DL" type="text" name="nic">
+                        <label id="lblCustNIC/DL" for="custNIC">Customer NIC</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="custEmail" placeholder="CustomerEmail" type="email" name="email">
+                        <label id="lblCustEmail" for="custEmail">Customer Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+
+                        <input class="form-control" id="regDate" placeholder="RegisterDate" type="text" name="regdate">
+                        <label id="lblregDate" for="regDate">Register Date</label>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="col">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="password1" placeholder="CustomerPassword" type="password">
+                        <label id="lblPassword" for="password1">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="password" placeholder="CustomerConfirmPassword" type="password">
+                        <label id="lblConfirmPassword" for="password">Confirm Password</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Upload Your NIC/Driving License</strong>
+                <form>
+                    <label class="form-label" for="imgNIC">Select a file</label>
+                    <input type="file" class="form-control" id="imgNIC" name="file">
+
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+    </div>
+
+    <br>
+    <button id="registerBtn" type="button" class="btn btn-success btn-rounded" style="width: 100%">Register</button>    <br><br>
+    <div class="row">
+        <!--<div class="col">
+            <abbr title="Search your deta"><button id="searchCustBtn" type="button" class="btn btn-success btn-rounded" style="width: 100%">Search Your Details</button></abbr>
+        </div>-->
+        <div class="col">
+            <abbr title="Search your details by giving your customer id and type the fields which should be updated "> <button id="updateCustBtn" type="button" class="btn btn-success btn-rounded" style="width: 100%">Update Your Details</button></abbr>
+        </div>
+        <div class="col">
+            <abbr title="Delete your registration by giving your customer id  "><button id="deleteCustBtn" type="button" class="btn btn-success btn-rounded" style="width: 100%">Delete Your Registration</button></abbr>
+        </div>
+
+
+    </div>
+    <br><br>
+    <!--<div data-role="footer" class="center">
+        <span style="font-size:0.8em">&copy;2021 Dilki Cooray Ltd. All Rights Reserved.</span>
+    </div>-->
+</div>
+
+<!--Admin page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="adminPage" class="bg-img" >
+    <div class="content" >
+        <header>Admin Login Form</header>
+        <form >
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input id="loginAdminName" type="text" required placeholder="Admin Name">
+            </div>
+            <div class="field space">
+                <span class="fa fa-lock"></span>
+                <input id="loginAdminPassword" type="Password" class="pass-key" required placeholder="Admin Password">
+                <span class="show">SHOW</span>
+            </div>
+            <div class="pass">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <div class="field">
+                <input id="adminLoginBtn" type="submit" value="LOGIN">
+            </div>
+        </form>
+        <br><br>
+        <div class="signup">Don't have account?
+            <a href="#" ><div id="signUpAdminLink">Signup Now</div></a>
+        </div>
+    </div>
+</div>
+
+<!--///////////////////////////admin home page//////////////////////////////-->
+
+
+<!--Admin Manage page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="adminManagePage">
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <div class="container-fluid">
+            <!--<a class="navbar-brand text-white" href="#" id="">Easy Car Rental</a>-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">
+                            <div id="addCarLink"><strong>Car Registration</strong></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">
+                            <div id="paymentLink"><strong>Payments</strong></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">
+                            <div id="addDriverLink"><strong>Driver Registration</strong></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">
+                            <div id="manageCustBookingLink"><strong>Manage Customers</strong></div>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <hr size="5" >
+
+
+
+</div>
+<!--Add a caritem page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="addCarPage">
+    <div data-role="header" class="center">
+        <strong>Add a Car</strong>
+        <br><br>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="carId"  aria-label="Car Id " id="carId">
+                        <label for="carId" class="form-label">Car Id </label>
+                    </div>
+                    <div class="form-floating mb-3">   <!-- drop down-->
+                        <input type="text" class="form-control" placeholder="carBrand"  aria-label="Car Brand" id="carBrand">
+                        <label for="carBrand" class="form-label">Car Brand</label>
+                    </div>
+                    <div class="form-floating mb-3"><!-- drop down-->
+                        <input type="text" class="form-control" placeholder="carType"  aria-label="Car Type (General/Luxuary)" id="carType">
+                        <label for="carType" class="form-label">Car Type (General/Luxuary)</label>
+                    </div>
+                    <div class="form-floating mb-3"><!-- drop down-->
+                        <input type="text" class="form-control" placeholder="carColor"  aria-label="Car Color" id="carColor">
+                        <label for="carColor" class="form-label">Car Color</label>
+                    </div>
+                    <div class="form-floating mb-3"><!-- drop down-->
+                        <input type="text" class="form-control" placeholder="transType"  aria-label="Transmission Type (Auto/Manual)" id="transType">
+                        <label for="transType" class="form-label">Transmission Type (Auto/Manual)</label>
+                    </div>
+                    <div class="form-floating mb-3"><!-- drop down-->
+                        <input type="text" class="form-control" placeholder="fuelType"  aria-label="Fuel Type (Pettrol/Diesel)" id="fuelType">
+                        <label for="fuelType" class="form-label">Fuel Type (Pettrol/Diesel)</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="noPass"  aria-label="No Of Passengers" id="noPass">
+                        <label for="noPass" class="form-label">No Of Passengers</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="dailyRate"  aria-label="Daily Rate (Rs)" id="dailyRate">
+                        <label for="dailyRate" class="form-label">Daily Rate (Rs)</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="freeKmDay"  aria-label="Free Km for a Day" id="freeKmDay">
+                        <label for="freeKmDay" class="form-label">Free Km for a Day</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="monthRate"  aria-label="Monthly Rate (Rs)" id="monthRate">
+                        <label for="monthRate" class="form-label">Monthly Rate (Rs)</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="freeKmMonth"  aria-label="Free Km for a Month" id="freeKmMonth">
+                        <label for="freeKmMonth" class="form-label">Free Km for a Month</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="priceExtraKm"  aria-label="Price for a Extra Km" id="priceExtraKm">
+                        <label for="priceExtraKm" class="form-label">Price for a Extra Km</label>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button id="addCarBtnAdmin" type="button" class="btn btn-success btn-rounded" style="width: 100%">Register Car</button>  <br><br>
+        </div>
+        <div class="col">
+            <button id="updateCarBtnAdmin" type="button" class="btn btn-success btn-rounded" style="width: 100%">Update Car Details</button>  <br><br>
+
+        </div>
+        <div class="col">
+            <button id="deleteCarBtnAdmin" type="button" class="btn btn-success btn-rounded" style="width: 100%">Remove Car</button>  <br><br>
+
+        </div>
+    </div>
+</div>
+
+<!--Manage customer booking page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<div id="manageCustBookingPage">
+    <div class="p-10 bg-surface-secondary">
+        <div class="container">
+            <div class="card">
+                <div class="card-header" style="background: #b5e5b6">
+                    <h6>Customer Bookings</h6>
+                </div>
+                <div class="table-responsive" >
+                    <table class="table table-hover table-nowrap" id="custBookTable">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Booking Id</th>
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Car Id</th>
+                            <th scope="col">Driver Id</th>
+                            <th scope="col">Booking Date</th>
+                            <th scope="col">Car Brand</th>
+                            <th scope="col">Pick up Date</th>
+                            <th scope="col">Pick up Time</th>
+                            <th scope="col">Return Date</th>
+                            <th scope="col">Return Time</th>
+                            <th scope="col">Venue</th>
+                            <th scope="col">Car Type</th>
+                            <th scope="col">Loss Damage Waiver</th>
+                            <th scope="col">Bank Slip</th>
+
+                            <!--<th></th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+     <hr>
+    <br>
+
+    <div class="p-10 bg-surface-secondary">
+        <div class="container">
+            <div class="card">
+                <div class="card-header" style="background: #b5e5b6">
+                    <h6>
+                        <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="searchCustId"  aria-label="searchCustId" id="searchCustId">
+                        <label for="searchCustId" class="form-label">Enter Customer Id</label>
+                    </div>
+                    </h6>
+
+                </div>
+                <div class="table-responsive" >
+                    <table class="table table-hover table-nowrap" id="searchCustDetailTable">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">NIC</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Reg Date</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">NIC/DL Image</th>
+                            <!--<th></th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <h1>get all customers</h1>
+</div>
+
+
+<!--payment  page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="paymentPage" >
+
+    <div class="row">
+        <div class="col" style="margin-left: 10vw">
+            <label  class="border" style="background: #63cd65">Payment Id</label>
+            <label id="lblreturnid" class="border" style="color: black"><strong>Payment Id</strong></label>
+        </div>
+        <div class="col">
+            <label  class="border" style="background: #63cd65">Date</label>
+            <label id="lblreturndate" class="border" style="color: black"><strong>Date</strong></label>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div class="p-10 bg-surface-secondary">
+        <div class="container">
+            <div class="card">
+                <div class="card-header" style="background: #b5e5b6">
+                    <h6>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="searchCustIdForBooking"   id="searchCustIdForBooking">
+                            <label for="searchCustIdForBooking" class="form-label">Enter Customer Id</label>
+                        </div>
+                    </h6>
+
+                </div>
+                <div class="table-responsive" >
+                    <table class="table table-hover table-nowrap" id="searchCustBookingDetailtable">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Booking Id</th>
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Car Id</th>
+                            <th scope="col">Driver Id</th>
+                            <th scope="col">Book Date</th>
+                            <th scope="col">Car Brand</th>
+                            <th scope="col">Pick Date</th>
+                            <th scope="col">Pick Time</th>
+                            <th scope="col">Return Date</th>
+                            <th scope="col">Return Time</th>
+                            <th scope="col">Venue</th>
+                            <th scope="col">Car Type</th>
+                            <th scope="col">Loss Price</th>
+                            <th scope="col">Bank Slip</th>
+                            <th scope="col"></th>
+                            <!--<th></th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div class="row">
+        <div class="col" style="margin-left: 10vw" >
+            <label  class="border" style="background: #63cd65">Date Difference</label>
+            <label id="lbldateDiff" class="border" style="color: black"><strong>Date Difference</strong></label>
+        </div>
+        <div class="col">
+            <label  class="border" style="background: #63cd65">Loss Damage Waiver payment</label>
+            <label id="lbllossDamage" class="border" style="color: black"><strong>Loss Damage Waiver payment</strong></label>
+        </div>
+        <div class="col">
+            <label  class="border" style="background: #63cd65">Booking Id</label>
+            <label id="lblbookid" class="border" style="color: black"><strong>Booking Id</strong></label>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div class="row">
+        <div class="col" style="margin-left: 10vw">
+            <!--<div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="enterKm"   id="enterKm">
+                <label for="enterKm" class="form-label">Enter Km s</label>
+            </div>-->
+        </div>
+        <div class="col">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="enterExtraKm"   id="enterExtraKm">
+                <label for="enterExtraKm" class="form-label">Enter extra Km</label>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col" style="margin-left: 10vw">
+            <label  class="border" style="background: #63cd65">Car Rental Cost</label>
+            <label id="lblcarRentalCost" class="border" style="color: black">Car Rental Cost</label>
+        </div>
+        <div class="col">
+            <label  class="border" style="background: #63cd65">Extra Km s Cost</label>
+            <label id="lblextrakmcost" class="border" style="color: black">Extra Km s Cost</label>
+        </div>
+        <div class="col">
+            <label  class="border" style="background: #63cd65">Driver Cost</label>
+            <label id="lbldrivercost" class="border" style="color: black">Driver Cost</label>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div  style="margin-left: 55vw">
+       <!-- <label  class="border" style="background: #63cd65">Total Price</label>-->
+        <label  class="border" style="background: #39cd3b" ><h3>Total Price</h3></label>
+        <label id="lblnettotal" class="border"  ><h3 style="color: red">Total Price</h3></label>
+    </div>
+    <br><br>
+    <hr>
+    <br>
+
+    <div class="row">
+        <div class="col" style="margin-left: 40vw">
+        <!-- <label  class="border" style="background: #63cd65">Total Price</label>-->
+        <label  class="border" style="background:#63cd65" ><h3>Return</h3></label>
+        <label id="lblreturn" class="border"  ><h3 style="color: red">Total Price</h3></label>
+    </div>
+        <div class="col">
+            <!-- <label  class="border" style="background: #63cd65">Total Price</label>-->
+            <label  class="border" style="background:#63cd65" ><h3>Pay</h3></label>
+            <label id="lblpay" class="border"  ><h3 style="color: red">Pay</h3></label>
+        </div>
+    </div>
+
+    <hr>
+    <br>
+    <div class="col">
+        <button id="addpayBtnAdmin" type="button" class="btn btn-success btn-rounded" style="width: 100%">Add Payment</button>  <br><br>
+    </div>
+
+</div>
+
+<!-- driver registration in admin page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="addDriverPage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="dId"  aria-label="dId" id="dId">
+                        <label for="dId" class="form-label">dId</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="dName"  aria-label="dName" id="dName">
+                        <label for="dName" class="form-label">dName</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="dAddress"  aria-label="dAddress" id="dAddress">
+                        <label for="dAddress" class="form-label">dAddress</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="dContact"  aria-label="Car Color" id="dContact">
+                        <label for="dContact" class="form-label">dContact</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button id="driverRegBtn" type="button" class="btn btn-success btn-rounded" >Register Driver</button>  <br><br>
+        </div>
+        <div class="col">
+            <button id="driverDeleleBtn" type="button" class="btn btn-success btn-rounded" >Remove Driver</button>  <br><br>
+        </div>
+        <div class="col">
+            <button id="driverUpdateBtn" type="button" class="btn btn-success btn-rounded" >Update Driver</button>  <br><br>
+        </div>
+        <div class="col">
+            <button id="driverSearchBtn" type="button" class="btn btn-success btn-rounded" >Search Driver</button>  <br><br>
+        </div>
+    </div>
+    <div>
+        <h1>get all table</h1>
+    </div>
+
+
+</div>
+
+
+
+
+<!--Driver page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="driverPage" class="bg-img" >
+    <div class="content" >
+        <header>Driver Login Form</header>
+        <form >
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input id="loginDriverName" type="text" required placeholder="Driver Name">
+            </div>
+            <div class="field space">
+                <span class="fa fa-lock"></span>
+                <input id="loginDriverPassword" type="password" class="pass-key" required placeholder="Driver Password">
+                <span class="show">SHOW</span>
+            </div>
+            <div class="pass">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <div class="field">
+                <input id="driverLogin" type="submit" value="LOGIN">
+
+            </div>
+        </form>
+        <br><br>
+        <div class="signup">Don't have account?
+            <a href="#" ><div id="signUpDriverLink">Sign Now</div></a>
+        </div>
+    </div>
+</div>
+
+<!--Driver Manager page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="driverManagePage">
+    <h1>Driver Manage</h1>
+</div>
+
+<div class="top-btn">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="controller/DashBoardController.js"></script>
+<script src="controller/CommonController.js"></script>
+<script src="controller/CustomerController.js"></script>
+
+<script src="controller/AdminController.js"></script>
+<script src="controller/DriverController.js"></script>
+<script src="controller/CarItemController.js"></script>
+<script src="controller/BookingController.js"></script>
+
+
+</body>
+</html>
