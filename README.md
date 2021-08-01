@@ -1,5 +1,5 @@
 Frontend - HTML , CSS , JS
 
 
-Backend - Spring 
+Backend - Spring MVC
 
