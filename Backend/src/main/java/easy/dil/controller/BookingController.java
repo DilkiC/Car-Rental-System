@@ -70,4 +70,11 @@ public class BookingController {
         return new ResponseEntity(new StandardResponse("200","done",all),HttpStatus.OK);
     }
 
+    @GetMapping(path = "/searchcustid/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity searchBookDetailsFromCustId(@PathVariable String id){
+        ArrayList<BookingDTO>all=bookingService.searchBookDetailsFromCustId(id);
+        return new ResponseEntity(new StandardResponse("200","done",all),HttpStatus.OK);
+
+    }
+
 }

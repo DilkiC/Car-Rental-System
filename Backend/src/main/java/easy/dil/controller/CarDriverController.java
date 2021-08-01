@@ -70,7 +70,7 @@ public class CarDriverController {
             id="D"+(Integer.parseInt(id)+1);
 
         }else {
-            id="D0";
+            id="D1";
         }
         return new ResponseEntity(new StandardResponse("200", "Done", id), HttpStatus.OK);
     }

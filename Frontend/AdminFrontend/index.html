@@ -157,7 +157,7 @@
 
 </section>
 
-<!--....................driver.......................-->
+<!--....................bookings.......................-->
 <section class="request" id="requestPage">
 
     <div class="p-10 bg-surface-secondary" id="requestContainer" >
@@ -197,6 +197,42 @@
     </div>
 
 
+    <div class="p-10 bg-surface-secondary" id="customerContainer" >
+        <div class="container" >
+            <div class="card" style="background: black">
+                <div class="card-header" style="background: black">
+                    <h6>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="searchCustId"  aria-label="searchCustId" id="searchCustId">
+                            <label for="searchCustId" class="form-label">Enter Customer Id</label>
+                        </div>
+                    </h6>
+                </div>
+                <div class="table-responsive" >
+                    <table class="table table-hover table-nowrap" id="searchCustTbl" style="background: #585656">
+                        <thead class="thead-light">
+                        <tr>
+
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Contact</th>
+
+                        </tr>
+                        </thead>
+                        <tbody style="background: #7f7b7b">
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 </section>
 
 <!--....................payment.......................-->
@@ -204,26 +240,28 @@
 <section class="payment" id="paymentPage">
 
     <div class="row">
-        <div class="col" style="margin-left: 10vw">
-            <label  class="border" style="background: #63cd65">Payment Id</label>
-            <label id="lblreturnid" class="border" style="color: black"><strong>Payment Id</strong></label>
+        <div class="col" style="margin-left: 10vw; margin-top: 5vh;">
+            <label style="color: white">Payment Id : </label>
+            <label id="lblreturnid"  style="color: #e3e335"><strong> </strong></label>
         </div>
-        <div class="col">
-            <label  class="border" style="background: #63cd65">Date</label>
-            <label id="lblreturndate" class="border" style="color: black"><strong>Date</strong></label>
+        <div class="col"  style="margin-top: 5vh;">
+            <label   style="color: white">Date : </label>
+            <label id="lblreturndate"  style="color: #e3e335"><strong></strong></label>
         </div>
     </div>
 
     <br><hr><br>
 
     <div class="p-10 bg-surface-secondary">
-        <div class="container">
-            <div class="card">
-                <div class="card-header" style="background: #b5e5b6">
+        <div class="container" style="background: black">
+            <div class="card" style="background: black">
+                <div class="card-header" style="background: black">
                     <h6>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" placeholder="searchCustIdForBooking"   id="searchCustIdForBooking">
-                            <label for="searchCustIdForBooking" class="form-label">Enter Customer Id</label>
+                        <div class="form-floating mb-3" style="background: black">
+                            <input type="text" class="" placeholder="Enter Customer ID"   id="searchCustIdForBooking" >
+<!--
+                            <label for="searchCustIdForBooking" class="form-label" style="color: #ffffff; background-color: #666363 ;border-radius: 30px">Enter Customer Id</label>
+-->
                         </div>
                     </h6>
 
@@ -231,7 +269,7 @@
                 <div class="table-responsive" >
                     <table class="table table-hover table-nowrap" id="searchCustBookingDetailtable">
                         <thead class="thead-light">
-                        <tr>
+                        <tr style="background-color: #938e8e">
                             <th scope="col">Booking Id</th>
                             <th scope="col">Customer Id</th>
                             <th scope="col">Car Id</th>
@@ -250,7 +288,7 @@
                             <!--<th></th>-->
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody >
 
                         </tbody>
                     </table>
@@ -263,16 +301,16 @@
 
     <div class="row">
         <div class="col" style="margin-left: 10vw" >
-            <label  class="border" style="background: #63cd65">Date Difference</label>
-            <label id="lbldateDiff" class="border" style="color: black"><strong>Date Difference</strong></label>
+            <label   style="color: white">Date Difference : </label>
+            <label id="lbldateDiff"  style="color: #e3e335"><strong></strong></label>
         </div>
         <div class="col">
-            <label  class="border" style="background: #63cd65">Loss Damage Waiver payment</label>
-            <label id="lbllossDamage" class="border" style="color: black"><strong>Loss Damage Waiver payment</strong></label>
+            <label   style="color:white">Loss Damage Waiver payment : </label>
+            <label id="lbllossDamage"  style="color: #e3e335"><strong></strong></label>
         </div>
         <div class="col">
-            <label  class="border" style="background: #63cd65">Booking Id</label>
-            <label id="lblbookid" class="border" style="color: black"><strong>Booking Id</strong></label>
+            <label   style="color:white">Booking Id : </label>
+            <label id="lblbookid"  style="color: #e3e335"><strong></strong></label>
         </div>
     </div>
 
@@ -280,15 +318,12 @@
 
     <div class="row">
         <div class="col" style="margin-left: 10vw">
-            <!--<div class="form-floating mb-3">
-                <input type="text" class="form-control" placeholder="enterKm"   id="enterKm">
-                <label for="enterKm" class="form-label">Enter Km s</label>
-            </div>-->
+
         </div>
         <div class="col">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" placeholder="enterExtraKm"   id="enterExtraKm">
-                <label for="enterExtraKm" class="form-label">Enter extra Km</label>
+                <input type="text" class="form-control" placeholder="enterExtraKm"   id="enterExtraKm" style="width: 500px">
+                <label for="enterExtraKm" class="form-label" style="width: 500px">Enter extra Km</label>
             </div>
         </div>
     </div>
@@ -297,16 +332,16 @@
 
     <div class="row">
         <div class="col" style="margin-left: 10vw">
-            <label  class="border" style="background: #63cd65">Car Rental Cost</label>
-            <label id="lblcarRentalCost" class="border" style="color: black">Car Rental Cost</label>
+            <label  style="color: white">Car Rental Cost : </label>
+            <label id="lblcarRentalCost"  style="color:  #e3e335"></label>
         </div>
         <div class="col">
-            <label  class="border" style="background: #63cd65">Extra Km s Cost</label>
-            <label id="lblextrakmcost" class="border" style="color: black">Extra Km s Cost</label>
+            <label   style="color: white">Extra Km s Cost : </label>
+            <label id="lblextrakmcost"  style="color: #e3e335"></label>
         </div>
         <div class="col">
-            <label  class="border" style="background: #63cd65">Driver Cost</label>
-            <label id="lbldrivercost" class="border" style="color: black">Driver Cost</label>
+            <label   style="color: white">Driver Cost : </label>
+            <label id="lbldrivercost"  style="color: #e3e335"></label>
         </div>
     </div>
 
@@ -316,8 +351,8 @@
 
     <div  style="margin-left: 55vw">
         <!-- <label  class="border" style="background: #63cd65">Total Price</label>-->
-        <label  class="border" style="background: #39cd3b" ><h3>Total Price</h3></label>
-        <label id="lblnettotal" class="border"  ><h3 style="color: red">Total Price</h3></label>
+        <label   style="color: white" ><h3>Total Price : </h3></label>
+        <label id="lblnettotal" style="color: #e3e335; font-size: 30px"> </label>
     </div>
     <br><br>
     <hr>
@@ -326,20 +361,20 @@
     <div class="row">
         <div class="col" style="margin-left: 40vw">
             <!-- <label  class="border" style="background: #63cd65">Total Price</label>-->
-            <label  class="border" style="background:#63cd65" ><h3>Return</h3></label>
-            <label id="lblreturn" class="border"  ><h3 style="color: red">Total Price</h3></label>
+            <label   style="color:white" ><h3>Return : </h3></label>
+            <label id="lblreturn"  style="color: #e3e335 ;font-size: 30px" ></label>
         </div>
         <div class="col">
             <!-- <label  class="border" style="background: #63cd65">Total Price</label>-->
-            <label  class="border" style="background:#63cd65" ><h3>Pay</h3></label>
-            <label id="lblpay" class="border"  ><h3 style="color: red">Pay</h3></label>
+            <label   style="color:white" ><h3>Pay : </h3></label>
+            <label id="lblpay" style="color: #e3e335; font-size: 30px"  ></label>
         </div>
     </div>
 
     <hr>
     <br>
     <div class="col">
-        <button id="addpayBtnAdmin" type="button" class="btn btn-success btn-rounded" style="width: 100%">Add Payment</button>  <br><br>
+        <button id="addpayBtnAdmin" type="button"  >Add Payment</button>  <br><br>
     </div>
 
 
@@ -359,6 +394,7 @@
 <script src="controllers/Driver.js"></script>
 <script src="controllers/Booking.js"></script>
 <script src="controllers/PaymentController.js"></script>
+<script src="controllers/other.js"></script>
 
 
 </body>
