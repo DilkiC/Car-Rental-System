@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Driver_Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+    <nav class="navbar navbar-light  ">
+        <div class="logo-container">
+            <h2 id="title" class="title">Easy Car Rental</h2>
+            <div class="logo"></div>
+        </div>
+        <ul class="menu1">
+            <li><a class="nav-link text-white" href="#home" id="homeLink"><div>Home</div></a></li>
+            <li><a class="nav-link text-white" href="#booking" id="bookingLink"><div>My Shedule</div></a></li>
+            <li><a class="nav-link text-white" href="#notiPage" id="notiLink"><div>Notifications</div></a></li>
+            <li><a class="nav-link text-white" href="#"><div>Settings</div></a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<section class="home" id="home">
+    <h2 id="userName">name</h2>
+    <h2 id="bookDay">Book your day !!!</h2>
+    <h5 id="yourId">ID : </h5>
+    <h5 id="userId">id</h5>
+
+
+</section>
+
+<!--Booking car with order page///////////////////////////////////////////////////////////////////////////////////////////////////////////////.-->
+
+<section class="booking" id="booking">
+    <div id="bookMenu1">
+        <label id="boookId1" class="form-label">Booking ID : </label>
+        <label id="boookId2" class="form-label">Booking ID</label>
+        <label id="custId1" class="form-label">Customer ID : </label>
+        <label id="custId2" class="form-label">id</label>
+        <label id="bookDate1" class="form-label">Booking Date : </label>
+        <label id="bookDate2" class="form-label">Booking Date</label>
+    </div>
+
+    <hr style="color: white">
+
+    <div class="container-fluid">
+        <div class="col"  >
+            <div class="row">
+                <div class="col">
+                    <form >
+
+                        <div>
+                            <label for="cmbcarBrand" id="cmbLabel" class="form-label">Select Car Brand</label>
+                            <select id="cmbcarBrand" class="boxStyle">
+                                <option>SuzukiAltoPremium</option>
+                                <option>SuzukiAltoK10</option>
+                                <option>ToyotaCorollaAxio</option>
+                                <option>PeroduaBezzaPrime</option>
+                                <option>ToyotaPremio</option>
+                                <option>MercedesBMW</option>
+                            </select>
+
+                        </div>
+                        <br><br>
+                        <div class="form-floating mb-3">
+                            <!--<input class="boxStyle" id="carIdCarItem" placeholder="Car ID" type="text" >-->
+                            <!--<label for="cmbcarBrand" id="" class="form-label">Select Car Brand</label>-->
+                            <select id="cmbcarId" class="boxStyle">
+                                <option>V1</option>
+                                <option>V2</option>
+                                <option>V3</option>
+                                <option>V4</option>
+                                <option>V5</option>
+                                <option>V6</option>
+                            </select>
+                            <!--
+                                                            <label  for="carIdCarItem" class="form-label">Enter Car ID(V0)</label>
+                            -->
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="boxStyle" id="pickDate" placeholder="pickDate" type="date" >
+                            <label  for="pickDate" class="form-label">Pick up Date</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="boxStyle" id="pickTime" placeholder="pickTime" type="time" >
+                            <label  for="pickTime" class="form-label">Pick up Time</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="boxStyle" id="returnDate" placeholder="returnDate" type="date" >
+                            <label  for="returnDate" class="form-label">Return Date</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="boxStyle" id="returnTime" placeholder="returnTime" type="time" >
+                            <label  for="returnTime" class="form-label">Return Time</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="boxStyle" id="venue" placeholder="venue" type="text" >
+                            <label  for="venue" class="form-label">Venue</label>
+                        </div>
+                        <hr>
+                        <strong style="color: #908d8d">Do you want a driver?</strong>
+                        <div class="form-check d-inline-flex mx-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioYES" value="1">
+                            <label class="form-check-label" for="radioYES" style="color: #908d8d">Yes</label>
+                        </div>
+                        <div class="form-check d-inline-flex mx-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioNo" value="2">
+                            <label class="form-check-label" for="radioNo" style="color: #908d8d">No</label>
+                        </div>
+
+
+                    </form>
+                </div>
+
+                <div class="col">
+                    <form>
+                        <strong style="color: #908d8d">Loss Damage Waiver</strong>
+                        <hr>
+
+
+                        <div>
+                            <label for="cmbcartype" class="form-label">Select Car Type</label>
+                            <select id="cmbcartype" class="boxStyle">
+                                <option>General</option>
+                                <option>Premium</option>
+                                <option>Luxury</option>
+                            </select>
+
+                        </div>
+
+                        <br><br>
+                        <div class="form-floating mb-3">
+                            <input class="boxStyle" id="lossPrice" placeholder="lossPrice" type="text" >
+                            <label class="form-label" for="lossPrice">Loss Price</label>
+                        </div>
+                        <hr>
+                        <div class="form-floating mb-3">
+                            <strong style="color: #908d8d">Details :</strong>
+                            <h5 style="color: #908d8d">Loss Damage Waiver payment to the BOC bank and account No is 12545684.You should upload your bank slip.</h5>
+                        </div>
+                        <hr>
+                        <div class="file-upload">
+                            <br><br>
+                            <strong style="color: #908d8d">Upload your Bank slip</strong>
+                            <br><br>
+                            <form>
+                                <label class="form-label" for="bankSlipFile">Select a file</label>
+                                <input type="file"  id="bankSlipFile" name="file" style="color: white">
+                            </form>
+                        </div>
+
+                        <br>
+                        <!--
+                                                <button id="uploadSlipBtn" type="button" class="btn btn-dark btn-rounded">Upload</button>
+                        -->
+                    </form>
+                </div>
+            </div>
+
+            <hr>
+
+            <!--//////////////////////////////////////////////////////////////////////////////////////////-->
+
+            <div class="row">
+                <!--add to cart table..................-->
+            </div>
+            <button id="bookBtn" type="button" class="btn  btn-rounded" >Book Your Rent Car</button>
+            <br><br>
+
+        </div>
+    </div>
+
+
+</section>
+
+<section class="notification" id="notiPage">
+    <h2 id="regNoti">regNoti</h2>
+
+
+
+</section>
+
+
+<button id="myBtn"><a href="#header" style="color: white"><img id="topImg" src="assets/images/top.jpg"></a></button>
+
+
+<!--<script src="controllers/CustomerController.js"></script>-->
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="controllers/UserProfile.js"></script>
+<script src="controllers/other.js"></script>
+<script src="controllers/BookingController.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy_User</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header id="header">
+    <nav class="navbar navbar-light  ">
+        <div class="logo-container">
+            <h2 id="title" class="title">Easy Car Rental</h2>
+            <div class="logo"></div>
+        </div>
+        <ul class="menu1">
+            <li><a class="nav-link text-white" href="#home"><div>Home</div></a></li>
+            <li><a class="nav-link text-white" href="#vehicle"><div>Vehicles</div></a></li>
+            <li><a class="nav-link text-white" href="#contact"><div>Contact us</div></a></li>
+        </ul>
+        <ul class="menu2">
+            <li><a class="nav-link text-white" href="#signin" id="li-sign-in"><div>Sign in</div></a></li>
+            <li><a class="nav-link text-white" href="#popupRegister" id="li-register"><div>Register</div></a></li>
+        </ul>
+    </nav>
+</header>
+<!--....................home.......................-->
+<section class="home" id="home">
+
+</section>
+
+<!--....................sign in.......................-->
+<section class="signin" id="signin">
+    <form>
+        <div class="email-container container-fluid">
+            <label for="txtCid"></label>
+            <input id="txtCid" placeholder="Enter Your Customer ID" required type="text">
+            <span id="email-validation"></span>
+        </div>
+        <div class="password-container container-fluid">
+            <label for="txtPassword"></label>
+            <i class="far fa-eye-slash" id="password-logo"></i>
+            <input id="txtPassword" placeholder="Password" required type="password">
+            <span id="password-validation"></span>
+        </div>
+        <a href="#">Recovery password</a>
+        <button  id="btn-sign-in" type="button">Sign In</button>
+    </form>
+
+    <button class="signInDA" id="driver-sign-in" type="button" ><span><a href="#popupDriverSignin"> Driver</a></span></button>
+    <!--<button class="signInDA" id="admin-sign-in" type="button"><span>Admin</span></button>-->
+
+    <p>If you don't have an account<br>You can<span id="btnRegister"><a href="#popupRegister">Register here!</a></span></p>
+
+    <!--popup user driver sign in-->
+    <div id="popupDriverSignin" class="overlay" style="display: none">
+        <div class="popupDiv">
+            <h2>Sign in</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--popupregister-->
+    <div id="popupRegister" class="overlay">
+        <div class="popupDiv">
+            <h2>Register Now !</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <h5>Select your role</h5>
+                <div class="radio">
+
+                    <input type="radio" id="radioCustomer" name="radio" value="Customer" >
+                    <label for="radioCustomer">Customer</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="radioDriver" name="radio" value="Driver">
+                    <label for="radioDriver">Driver</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="radioAdmin" name="radio" value="Admin">
+                    <label for="radioAdmin">Admin</label>
+
+                    <div id="customerRegister">
+                        <form id="custForm">
+                            <label class="custInput" id="custId" >ID</label><br>
+                            <input class="custInput" id="custName" placeholder="Name" required type="text"><br>
+                            <input class="custInput" id="custEmail" placeholder="Email" required type="email"><br>
+                            <input class="custInput" id="custContact" placeholder="Contact" required type="text"><br>
+                            <input class="custInput" id="custPassword" placeholder="Password" required type="password">
+
+                            <br>
+                            <h6 >Upload Your National Id </h6>
+                            <input class="form-control" id="nicImageCust" required type="file">
+                            <button class="btn-dark" id="registerBtnCust">Register</button>
+                        </form>
+                    </div>
+                    <div id="driverRegister">
+                        <form id="driverForm">
+                            <label class="custInput" id="driverId">ID</label><br>
+                            <input class="custInput" id="driverName" placeholder="Name" required type="text"><br>
+                            <input class="custInput" id="driverContact" placeholder="Contact" required type="text"><br>
+                            <input class="custInput" id="driverPassword" placeholder="Password" required type="password">
+
+                            <br>
+<!--
+                            <h6 >Upload Your National Id </h6>
+                            <input class="form-control" id="nicImageDriver" required type="file">
+-->
+                            <h6 >Upload Your Driving License </h6>
+                            <input class="form-control" id="dlDriver" required type="file">
+
+                            <button class="btn-dark" id="registerBtnDriver">Register</button>
+                        </form>
+
+                    </div>
+                    <div id="adminRegister">
+                    Admin
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!--popupregister-->
+
+
+
+</section>
+
+
+
+<!--....................vehicle section.......................-->
+<section class="vehicle" id="vehicle">
+    <div  class="container mt-5">
+        <div class="row justify-content-center">
+
+            <h2>General Cars</h2>
+
+            <div class="col-lg-4 col-md-12 ">
+                <div class="card box-shadow mx-auto my-5" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">V1</h5>
+                        <p class="card-text"><h3 id="card1" style="color: white">SuzukiAltoPremium</h3></p>
+                        <a href="#popupVehicle" class="btn btn-dark">Reach Me</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 ">
+                <div class="card box-shadow my-5 mx-auto" style="width: 18rem;">
+                    <!--
+                        <img src="https://nsa40.casimages.com/img/2021/06/15/210615072120170366.jpg" class="card-img-top" alt="...">
+                    -->
+                    <div class="card-body">
+                        <h5 class="card-title">V2</h5>
+                        <p class="card-text"><h3 id="card2" style="color: white">SuzukiAltoK10</h3></p>
+                        <a href="#popupVehicle" class="btn btn-dark">Reach Me</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>Premium Cars</h2>
+
+            <div class="col-lg-4 col-md-12 ">
+                <div class="card box-shadow mx-auto my-5" style="width: 18rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">V3 </h5>
+                        <p class="card-text"><h3 id="card3" style="color: white">ToyotaCorollaAxio</h3></p>
+                        <a href="#popupVehicle" class="btn btn-dark">Reach Me</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 ">
+                <div class="card box-shadow mx-auto my-5" style="width: 18rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">V4 </h5>
+                        <p class="card-text"><h3 id="card4" style="color: white">PeroduaBezzaPrime</h3></p>
+                        <a href="#popupVehicle" class="btn btn-dark">Reach Me</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Luxury Cars</h2>
+
+            <div class="col-lg-4 col-md-12 ">
+                <div class="card box-shadow mx-auto my-5" style="width: 18rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">V5 </h5>
+                        <p class="card-text"><h3 id="card5" style="color: white">ToyotaPremio</h3></p>
+                        <a href="#popupVehicle" class="btn btn-dark">Reach Me</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 ">
+                <div class="card box-shadow mx-auto my-5" style="width: 18rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">V6 </h5>
+                        <p class="card-text"><h3 id="card6" style="color: white">MercedesBMW</h3></p>
+                        <a href="#popupVehicle" class="btn btn-dark">Reach Me</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <span id="lossText"><a href="#popupLoss" style="color: white"><strong>Loss Damage Waiver Payments</strong></a></span>
+
+
+    <div id="popupVehicle" class="overlay" >
+        <div class="popupDiv">
+            <h2 style="color: black">Vehicles</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="">
+                <div class="p-10 bg-surface-secondary" id="" >
+                    <div class="" >
+                        <div class="card" style="background: black">
+                            <div class="card-header" style="background: black">
+                                <h6 style="color: white">Vehicles</h6>
+                            </div>
+                            <div class="table-responsive" >
+                                <table class="table table-hover table-nowrap" id="vehicleTbl" style="background: #585656">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Car Id</th>
+                                        <th scope="col">Brand</th>
+                                        <th scope="col">Car Type</th>
+                                        <th scope="col">Color</th>
+                                        <th scope="col">Transmission Type</th>
+                                        <th scope="col">Fuel Type</th>
+                                        <th scope="col">No of Passengers</th>
+                                        <th scope="col">Daily Rate(Rs.)</th>
+                                        <th scope="col">Free Km for a day</th>
+                                        <th scope="col">Monthly Rate</th>
+                                        <th scope="col">Free Km for a month</th>
+                                        <th scope="col">Price per extra Km(Rs.)</th>
+                                        <!--<th scope="col">Password</th>-->
+                                    </tr>
+                                    </thead>
+                                    <tbody style="background: #7f7b7b">
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--popupLossPayments...........................-->
+    <div id="popupLoss" class="overlay" style="height: 70vh">
+        <div class="popupDiv">
+            <h2 style="color: black">Loss Damage Waiver Payments</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="">
+                <div class="p-10 bg-surface-secondary"  >
+                    <div class="" >
+                        <div class="card" style="background: black">
+                            <div class="card-header" style="background: black">
+                                <h6 style="color: white"></h6>
+                            </div>
+                            <div class="table-responsive" >
+                                <table class="table table-hover table-nowrap" id="lossTbl" style="background: #585656">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Car Type</th>
+                                        <th scope="col">Loss Damage Waiver Payment(Rs.) </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody style="background: #7f7b7b">
+                                    <tr>
+                                        <td>General</td>
+                                        <td>10000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Premium</td>
+                                        <td>15000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Luxury</td>
+                                        <td>20000</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<!--....................contact us.......................-->
+<section class="contact" id="contact">
+
+    <h1 class="title">Contact Us</h1><br>
+    <h6 class="title2" id="email">Email : easy@gmail.com</h6>
+    <h6 class="title2" id="call">Contact : +94 112569874</h6>
+    <h6 class="title2" id="address">Address : No 12, Galle Rd, Panadura</h6>
+
+    <section class="bg-image"></section>
+
+
+</section>
+
+
+<button id="myBtn"><a href="#header" style="color: white"><img id="topImg" src="assets/images/top.jpg"></a></button>
+
+
+
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="controllers/other.js"></script>
+<script src="controllers/CustomerController.js"></script>
+<script src="controllers/VehicleController.js"></script>
+<script src="controllers/Driver.js"></script>
+
+
+</body>
+</html>

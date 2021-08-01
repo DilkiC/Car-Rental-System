@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="customers-content-container" id="customers-content-container">
+    <div class="header"></div>
+    <form class="customers-form row g-3" id="customers-form">
+        <div class="col-md-4">
+            <label class="form-label" for="txtSearchCustomer">Search Customer</label>
+            <input class="form-control" id="txtSearchCustomer" list="customers-data-list"
+                   placeholder="Type to search...">
+            <datalist id="customers-data-list"></datalist>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="txtCustomerUID">UID</label>
+            <input aria-label="disabled uid" class="form-control" disabled id="txtCustomerUID" readonly required
+                   type="text">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="txtCID">CID</label>
+            <input aria-label="disabled cid" class="form-control" disabled id="txtCID" readonly required type="text">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="txtCustomerName">Name</label>
+            <input class="form-control" id="txtCustomerName" required type="text">
+        </div>
+        <div class="col-md-5">
+            <label class="form-label" for="txtCustomerAddress">Address</label>
+            <input class="form-control" id="txtCustomerAddress" required type="text">
+        </div>
+        <div class="col-md-3">
+            <label class="form-label" for="txtCustomerContact">Contact</label>
+            <input class="form-control" id="txtCustomerContact" required type="text">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label" for="txtCustomerNIC">NIC</label>
+            <input class="form-control" id="txtCustomerNIC" required type="text">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label" for="txtCustomerDRLicense">DR.License</label>
+            <input class="form-control" id="txtCustomerDRLicense" required type="text">
+        </div>
+        <div class="col-md-6">
+            <img alt="nic_image" class="img-fluid" id="customer_nic_image" src="">
+        </div>
+        <div class="col-md-6">
+            <img alt="dr.license_image" class="img-fluid" id="customer_drlicense_image" src="">
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-success" id="btnDeleteCustomer" type="button">Delete</button>
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-warning" id="btnUpdateCustomer" type="button">Update</button>
+        </div>
+    </form>
+    <div class="customers-table-container">
+        <table class="customers-table table table-striped table-hover" id="customers-table">
+            <thead>
+            <tr>
+                <th>UID</th>
+                <th>CID</th>
+                <th>Name</th>
+                <th>NIC</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer"></div>
+</div>
+
+
+
+<script src="/assets/js/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

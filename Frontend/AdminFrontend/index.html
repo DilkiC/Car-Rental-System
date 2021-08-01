@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy_Admin</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header id="header">
+    <nav class="navbar navbar-light  ">
+        <div class="logo-container">
+            <h2 id="title" class="title">Easy Car Rental</h2>
+            <div class="logo"></div>
+        </div>
+        <ul class="menu1">
+            <li><a class="nav-link text-white" id="homeLink" href="#homePage"><div >Home</div></a></li>
+            <li><a class="nav-link text-white" id="customerLink" href="#customerPage"><div>Customers</div></a></li>
+            <li><a class="nav-link text-white" id="requestLink" href="#requestPage"><div>Requests</div></a></li>
+            <li><a class="nav-link text-white" id="driverLink" href="#driverPage" ><div>Drivers</div></a></li>
+            <li><a class="nav-link text-white" id="vehicleLink" href="#vehiclePage"><div>Vehicle</div></a></li>
+            <li><a class="nav-link text-white" id="paymentLink" href="#paymentPage"><div>Payments</div></a></li>
+
+        </ul>
+
+
+    </nav>
+</header>
+<!--....................home.......................-->
+
+<section class="home" id="homePage">
+
+
+</section>
+
+<!--....................customer.......................-->
+
+<section id="customerPage">
+    <div class="p-10 bg-surface-secondary" id="custTblContainer" >
+        <div class="container" >
+            <div class="card" style="background: black">
+                <div class="card-header" style="background: black">
+                    <h6 style="color: white">Customers</h6>
+                </div>
+                <div class="table-responsive" >
+                    <table class="table table-hover table-nowrap" id="custTbl" style="background: #585656">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">CID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">NIC Image</th>
+                            <!--<th scope="col">Password</th>-->
+                        </tr>
+                        </thead>
+                        <tbody style="background: #7f7b7b">
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--....................vehicle.......................-->
+<section class="vehicle" id="vehiclePage">
+
+    <div id="addCarPage">
+        <div data-role="header" class="center">
+            <strong>Add a Car</strong>
+            <br><br>
+        </div>
+
+        <div class="container-fluid">
+        <div  class="row ">
+            <div class="col" id="vehicleDiv1">
+                <input type="text" class="form-control" placeholder="carId"  aria-label="Car Id " id="carId">
+                <input type="text" class="form-control" placeholder="carBrand"  aria-label="Car Brand" id="carBrand">
+                <input type="text" class="form-control" placeholder="carType"  aria-label="Car Type (General/Luxuary)" id="carType">
+                <input type="text" class="form-control" placeholder="carColor"  aria-label="Car Color" id="carColor">
+                <input type="text" class="form-control" placeholder="transType"  aria-label="Transmission Type (Auto/Manual)" id="transType">
+                <input type="text" class="form-control" placeholder="fuelType"  aria-label="Fuel Type (Pettrol/Diesel)" id="fuelType">
+
+
+            </div>
+            <div class="col" id="vehicleDiv2">
+                <input type="text" class="form-control" placeholder="noPass"  aria-label="No Of Passengers" id="noPass">
+                <input type="text" class="form-control" placeholder="dailyRate"  aria-label="Daily Rate (Rs)" id="dailyRate">
+                <input type="text" class="form-control" placeholder="freeKmDay"  aria-label="Free Km for a Day" id="freeKmDay">
+                <input type="text" class="form-control" placeholder="monthRate"  aria-label="Monthly Rate (Rs)" id="monthRate">
+                <input type="text" class="form-control" placeholder="freeKmMonth"  aria-label="Free Km for a Month" id="freeKmMonth">
+                <input type="text" class="form-control" placeholder="priceExtraKm"  aria-label="Price for a Extra Km" id="priceExtraKm">
+            </div>
+        </div>
+        </div>
+
+
+        <div class="row" id="vehicleDiv3">
+            <div class="col">
+                <button id="addCarBtnAdmin" type="button" class="btn  btn-rounded" style="width: 100%">Register Car</button>  <br><br>
+            </div>
+            <div class="col">
+                <button id="updateCarBtnAdmin" type="button" class="btn  btn-rounded" style="width: 100%">Update Car Details</button>  <br><br>
+
+            </div>
+            <div class="col">
+                <button id="deleteCarBtnAdmin" type="button" class="btn  btn-rounded" style="width: 100%">Remove Car</button>  <br><br>
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<!--....................driver.......................-->
+<section class="driver" id="driverPage">
+
+    <div class="p-10 bg-surface-secondary" id="driverContainer" >
+        <div class="container" >
+            <div class="card" style="background: black">
+                <div class="card-header" style="background: black">
+                    <h6 style="color: white">Drivers</h6>
+                </div>
+                <div class="table-responsive" >
+                    <table class="table table-hover table-nowrap" id="driverTbl" style="background: #585656">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">DID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Conatct</th>
+                            <!--<th scope="col">Password</th>-->
+                            <th scope="col">DL Image</th>
+                            <!--<th scope="col">Password</th>-->
+                        </tr>
+                        </thead>
+                        <tbody style="background: #7f7b7b">
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<!--....................driver.......................-->
+<section class="request" id="requestPage">
+
+    <div class="p-10 bg-surface-secondary" id="requestContainer" >
+        <div class="container" >
+            <div class="card" style="background: black">
+                <div class="card-header" style="background: black">
+                    <h6 style="color: white">Bookings</h6>
+                </div>
+                <div class="table-responsive" >
+                    <table class="table table-hover table-nowrap" id="requestTbl" style="background: #585656">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Booking Id</th>
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Car Id</th>
+                            <th scope="col">Driver Id</th>
+                            <th scope="col">Booking Date</th>
+                            <th scope="col">Car Brand</th>
+                            <th scope="col">Pick up Date</th>
+                            <th scope="col">Pick up Time</th>
+                            <th scope="col">Return Date</th>
+                            <th scope="col">Return Time</th>
+                            <th scope="col">Venue</th>
+                            <th scope="col">Car Type</th>
+                            <th scope="col">Loss Damage Waiver</th>
+                            <th scope="col">Bank Slip</th>
+                        </tr>
+                        </thead>
+                        <tbody style="background: #7f7b7b">
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<!--....................payment.......................-->
+
+<section class="payment" id="paymentPage">
+
+    <div class="row">
+        <div class="col" style="margin-left: 10vw">
+            <label  class="border" style="background: #63cd65">Payment Id</label>
+            <label id="lblreturnid" class="border" style="color: black"><strong>Payment Id</strong></label>
+        </div>
+        <div class="col">
+            <label  class="border" style="background: #63cd65">Date</label>
+            <label id="lblreturndate" class="border" style="color: black"><strong>Date</strong></label>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div class="p-10 bg-surface-secondary">
+        <div class="container">
+            <div class="card">
+                <div class="card-header" style="background: #b5e5b6">
+                    <h6>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="searchCustIdForBooking"   id="searchCustIdForBooking">
+                            <label for="searchCustIdForBooking" class="form-label">Enter Customer Id</label>
+                        </div>
+                    </h6>
+
+                </div>
+                <div class="table-responsive" >
+                    <table class="table table-hover table-nowrap" id="searchCustBookingDetailtable">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Booking Id</th>
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Car Id</th>
+                            <th scope="col">Driver Id</th>
+                            <th scope="col">Book Date</th>
+                            <th scope="col">Car Brand</th>
+                            <th scope="col">Pick Date</th>
+                            <th scope="col">Pick Time</th>
+                            <th scope="col">Return Date</th>
+                            <th scope="col">Return Time</th>
+                            <th scope="col">Venue</th>
+                            <th scope="col">Car Type</th>
+                            <th scope="col">Loss Price</th>
+                            <th scope="col">Bank Slip</th>
+                            <th scope="col"></th>
+                            <!--<th></th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div class="row">
+        <div class="col" style="margin-left: 10vw" >
+            <label  class="border" style="background: #63cd65">Date Difference</label>
+            <label id="lbldateDiff" class="border" style="color: black"><strong>Date Difference</strong></label>
+        </div>
+        <div class="col">
+            <label  class="border" style="background: #63cd65">Loss Damage Waiver payment</label>
+            <label id="lbllossDamage" class="border" style="color: black"><strong>Loss Damage Waiver payment</strong></label>
+        </div>
+        <div class="col">
+            <label  class="border" style="background: #63cd65">Booking Id</label>
+            <label id="lblbookid" class="border" style="color: black"><strong>Booking Id</strong></label>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div class="row">
+        <div class="col" style="margin-left: 10vw">
+            <!--<div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="enterKm"   id="enterKm">
+                <label for="enterKm" class="form-label">Enter Km s</label>
+            </div>-->
+        </div>
+        <div class="col">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="enterExtraKm"   id="enterExtraKm">
+                <label for="enterExtraKm" class="form-label">Enter extra Km</label>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col" style="margin-left: 10vw">
+            <label  class="border" style="background: #63cd65">Car Rental Cost</label>
+            <label id="lblcarRentalCost" class="border" style="color: black">Car Rental Cost</label>
+        </div>
+        <div class="col">
+            <label  class="border" style="background: #63cd65">Extra Km s Cost</label>
+            <label id="lblextrakmcost" class="border" style="color: black">Extra Km s Cost</label>
+        </div>
+        <div class="col">
+            <label  class="border" style="background: #63cd65">Driver Cost</label>
+            <label id="lbldrivercost" class="border" style="color: black">Driver Cost</label>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div  style="margin-left: 55vw">
+        <!-- <label  class="border" style="background: #63cd65">Total Price</label>-->
+        <label  class="border" style="background: #39cd3b" ><h3>Total Price</h3></label>
+        <label id="lblnettotal" class="border"  ><h3 style="color: red">Total Price</h3></label>
+    </div>
+    <br><br>
+    <hr>
+    <br>
+
+    <div class="row">
+        <div class="col" style="margin-left: 40vw">
+            <!-- <label  class="border" style="background: #63cd65">Total Price</label>-->
+            <label  class="border" style="background:#63cd65" ><h3>Return</h3></label>
+            <label id="lblreturn" class="border"  ><h3 style="color: red">Total Price</h3></label>
+        </div>
+        <div class="col">
+            <!-- <label  class="border" style="background: #63cd65">Total Price</label>-->
+            <label  class="border" style="background:#63cd65" ><h3>Pay</h3></label>
+            <label id="lblpay" class="border"  ><h3 style="color: red">Pay</h3></label>
+        </div>
+    </div>
+
+    <hr>
+    <br>
+    <div class="col">
+        <button id="addpayBtnAdmin" type="button" class="btn btn-success btn-rounded" style="width: 100%">Add Payment</button>  <br><br>
+    </div>
+
+
+
+</section>
+
+
+
+
+<button id="myBtn"><a href="#header" style="color: white"><img id="topImg" src="assets/images/top.jpg"></a></button>
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="controllers/DashboardController.js"></script>
+<script src="controllers/CustomerController.js"></script>
+<script src="controllers/VehicleController.js"></script>
+<script src="controllers/Driver.js"></script>
+<script src="controllers/Booking.js"></script>
+<script src="controllers/PaymentController.js"></script>
+
+
+</body>
+</html>

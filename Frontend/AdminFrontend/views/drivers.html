@@ -1,0 +1,71 @@
+<div class="drivers-content-container" id="drivers-content-container">
+    <div class="header"></div>
+    <form class="drivers-form row g-3">
+        <div class="col-md-3">
+            <label class="form-label" for="txtSearchDriver">Search Driver</label>
+            <input class="form-control" id="txtSearchDriver" list="drivers-data-list" placeholder="Type to search...">
+            <datalist id="drivers-data-list"></datalist>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label" for="txtDriverUID">UID</label>
+            <input aria-label="disabled uid" class="form-control" disabled id="txtDriverUID" readonly required
+                   type="text">
+        </div>
+        <div class="col-md-3">
+            <label class="form-label" for="txtDID">DID</label>
+            <input aria-label="disabled did" class="form-control" disabled id="txtDID" readonly required type="text">
+        </div>
+        <div class="col-md-3">
+            <label class="form-label" for="txtDriverName">Name</label>
+            <input class="form-control" id="txtDriverName" required type="text">
+        </div>
+        <div class="col-md-5">
+            <label class="form-label" for="txtDriverAddress">Address</label>
+            <input class="form-control" id="txtDriverAddress" required type="text">
+        </div>
+        <div class="col-md-3">
+            <label class="form-label" for="txtDriverContact">Contact</label>
+            <input class="form-control" id="txtDriverContact" required type="text">
+        </div>
+        <div class="col-md-3">
+            <label class="form-label" for="txtDriverAvailability">Availability</label>
+            <input class="form-control" id="txtDriverAvailability" required type="text">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label" for="txtDriverNIC">NIC</label>
+            <input class="form-control" id="txtDriverNIC" required type="text">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label" for="txtDriverDRLicense">DR.License</label>
+            <input class="form-control" id="txtDriverDRLicense" required type="text">
+        </div>
+        <div class="col-md-6">
+            <img alt="nic_image" class="img-fluid" id="driver_nic_image" src="">
+        </div>
+        <div class="col-md-6">
+            <img alt="dr.license_image" class="img-fluid" id="driver_drlicense_image" src="">
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-success" id="btnDeleteDriver" type="button">Delete</button>
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-warning" id="btnUpdateDriver" type="button">Update</button>
+        </div>
+    </form>
+    <div class="drivers-table-container">
+        <table class="drivers-table table table-striped table-hover" id="drivers-table">
+            <thead>
+            <tr>
+                <th>UID</th>
+                <th>DID</th>
+                <th>Name</th>
+                <th>NIC</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer"></div>
+</div>
